@@ -1,0 +1,100 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #ff6633, #f63e2e);
+}
+
+
+
+/* ........................... */
+/* Navbar */
+
+.header-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navbar-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0;
+    margin-top: 0.8rem;
+}
+
+
+.header-navbar__item {
+    padding: 0 7px;
+}
+
+.header-navbar__item.non-padding {
+    padding: 0;
+}
+
+
+.header-navbar__item,
+.header-navbar__icon-link,
+.navbar-item__link {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+}
+
+.navbar-item__link:hover {
+    color: rgba(255,255,255, 0.7);
+}
+
+.header-navbar__icon-link {
+    margin-right: 8px;
+}
+
+
+.header-navbar__item--separate {
+    border-right: 2px solid rgba(255, 255 ,255, 0.4);
+}
+
+
+
+/* ........................... */
+/* QR */
+
+.header-navbar__item--has-qr:hover .header__qr {
+    display: block;
+}
+
+.header__qr  {
+    position: absolute;
+    background-color: var(--white-color);
+    width: 200px;
+    left: 0;
+    top: 155%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+}
+
+.header__qr::before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 20px;
+    top: -20px;
+    left: 0;
+}
+
+
+.header__qr-code {
+    width: 100%;
+} 
+
+.header__qr-apps {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.header__qr-app {
+    width: 50%;
+    padding: 4px 8px;
+} 
