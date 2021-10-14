@@ -19,7 +19,7 @@
     <div class="app">
         <header class="header">
             <div class="grid">
-                <nav class="header-navbar">
+                <nav class="header__navbar">
                     <ul class="header-navbar-list">
                         <li class="header-navbar__item header-navbar__item--separate"><a href="" class="navbar-item__link">Kênh người bán</a></li>
                         <li class="header-navbar__item header-navbar__item--separate"><a href="" class="navbar-item__link">Trở thành người bán shoppee</a></li>
@@ -129,10 +129,21 @@
                                 Hỗ trợ
                             </a>
                          </li>
-                        <li class="header-navbar__item header-navbar__item--separate"><a href="" class="navbar-item__link">Đăng ký</a></li>
+                        <li class="header-navbar__item header-navbar__item--separate"><a href="#" class="navbar-item__link  js-register-btn">Đăng ký</a></li>
                         <li class="header-navbar__item"><a href="" class="navbar-item__link">Đăng nhập</a></li>
                     </ul>
                 </nav>
+                <!-- <div class="header__rest">
+                    <div class="header__icon-shopee">
+                        <img src="./assets/img/shopee-icon.png" alt="Shopee icon">
+                    </div>
+                    <div class="header__search-bar">
+
+                    </div>
+                    <div class="header__cart">
+
+                    </div>
+                </div> -->
             </div>
         </header>
         
@@ -143,7 +154,67 @@
         <footer class="footer">
 
         </footer>
+
+        <div class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-body">
+                <!-- Auth Register -->
+                <div class="register-form">
+                    <div class="modal-header">
+                        <h3 class="modal-header__heading">Đăng ký</h3>
+                        <span class="modal-header__switch-btn">Đăng nhập</span>
+                    </div>
+
+                    <div class="register-form__form">
+                        <div class="register-form__group">
+                            <input type="text" class="register-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="register-form__group">
+                            <input type="password" class="register-form__input" placeholder="Mật khẩu của bạn">
+                        </div>
+                        <div class="register-form__group">
+                            <input type="password" class="register-form__input" placeholder="Nhập lại mật khẩu">
+                        </div>
+                    </div>
+
+                    <div class="register-form__policy">
+                        Bằng việc đăng ký, bạn đã đồng ý với F8-shop về 
+                        <a href="">Điều khoản dịch vụ</a> & 
+                        <a href="">Chính sách bảo mật</a>
+                    </div>
+
+                    
+                    <div class="register-form__footer">
+                        <div class="btn register-form__footer--back">TRỞ LẠI</div>
+                        <div class="btn btn--primary">ĐĂNG KÝ</div>
+                    </div>
+                </div>
+
+                <div class="register-form__socials">
+                    <a href="" class="btn btn--facebook">
+                        <i class="fab fa-facebook-square"></i>
+                        <span class="text-social">Kết nối với Facebook</span>
+                    </a>
+                    <a href="" class="btn btn--google">
+                        <i class="fab fa-google"></i>
+                        Kết nối với Google
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
+
+    <script>
+        var varRegisterBtn = document.querySelector('.js-register-btn');
+        var varModal = document.querySelector('.modal');
+
+
+        console.log(varModal);
+        varRegisterBtn.addEventListener('click', function() {
+            varModal.style.display = "flex";
+        });
+        
+    </script>
 </body>
 </html>
