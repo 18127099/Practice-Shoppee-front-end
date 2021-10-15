@@ -130,7 +130,7 @@
                             </a>
                          </li>
                         <li class="header-navbar__item header-navbar__item--separate"><a href="#" class="navbar-item__link  js-register-btn">Đăng ký</a></li>
-                        <li class="header-navbar__item"><a href="" class="navbar-item__link">Đăng nhập</a></li>
+                        <li class="header-navbar__item"><a href="#" class="navbar-item__link js-login-btn">Đăng nhập</a></li>
                     </ul>
                 </nav>
                 <!-- <div class="header__rest">
@@ -158,39 +158,70 @@
         <div class="modal">
             <div class="modal-overlay"></div>
             <div class="modal-body">
-                <!-- Auth Register -->
-                <div class="register-form">
+                <!-- Auth auth -->
+                <div class="auth-form register-form">
                     <div class="modal-header">
                         <h3 class="modal-header__heading">Đăng ký</h3>
                         <span class="modal-header__switch-btn">Đăng nhập</span>
                     </div>
 
-                    <div class="register-form__form">
-                        <div class="register-form__group">
-                            <input type="text" class="register-form__input" placeholder="Email của bạn">
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
                         </div>
-                        <div class="register-form__group">
-                            <input type="password" class="register-form__input" placeholder="Mật khẩu của bạn">
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
                         </div>
-                        <div class="register-form__group">
-                            <input type="password" class="register-form__input" placeholder="Nhập lại mật khẩu">
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
                         </div>
                     </div>
 
-                    <div class="register-form__policy">
+                    <div class="auth-form__policy">
                         Bằng việc đăng ký, bạn đã đồng ý với F8-shop về 
                         <a href="">Điều khoản dịch vụ</a> & 
                         <a href="">Chính sách bảo mật</a>
                     </div>
 
                     
-                    <div class="register-form__footer">
-                        <div class="btn register-form__footer--back">TRỞ LẠI</div>
+                    <div class="auth-form__footer">
+                        <div class="btn auth-form__footer--back">TRỞ LẠI</div>
                         <div class="btn btn--primary">ĐĂNG KÝ</div>
                     </div>
                 </div>
 
-                <div class="register-form__socials">
+                <!-- Login auth -->
+                <div class="auth-form login-form">
+                    <div class="modal-header">
+                        <h3 class="modal-header__heading">Đăng nhập</h3>
+                        <span class="modal-header__switch-btn">Đăng ký</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__support">
+                        <a class="auth-form-support__forgot" href="">Quên mật khẩu</a>
+                        <span class="auth-form-support__separate"></span>
+                        <a class="auth-form-support__help" href="">Cần trợ giúp?</a>
+                    </div>
+
+                    
+                    <div class="auth-form__footer">
+                        <div class="btn auth-form__footer--back">TRỞ LẠI</div>
+                        <div class="btn btn--primary">ĐĂNG NHẬP</div>
+                    </div>
+                </div>
+
+
+                <!-- Social network -->
+                <div class="auth-form__socials">
                     <a href="" class="btn btn--facebook">
                         <i class="fab fa-facebook-square"></i>
                         <span class="text-social">Kết nối với Facebook</span>
@@ -200,6 +231,7 @@
                         Kết nối với Google
                     </a>
                 </div>
+
             </div>
         </div>
     </div>
@@ -207,13 +239,22 @@
 
     <script>
         var varRegisterBtn = document.querySelector('.js-register-btn');
+        var varLoginBtn = document.querySelector('.js-login-btn');
         var varModal = document.querySelector('.modal');
+        var varRegisterForm = document.querySelector('.register-form');
+        var varLoginForm = document.querySelector('.login-form');
 
-
-        console.log(varModal);
         varRegisterBtn.addEventListener('click', function() {
             varModal.style.display = "flex";
+            varRegisterForm.style.display = "block";
         });
+
+        varLoginBtn.addEventListener('click', function() {
+            varModal.style.display = "flex";
+            varLoginForm.style.display = "block";
+        });
+
+
         
     </script>
 </body>
