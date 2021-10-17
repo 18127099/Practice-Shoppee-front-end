@@ -1,16 +1,18 @@
 .header {
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0, #ff6633, #f63e2e);
 }
 
 
-
-/* ........................... */
+/* ...........................  ...........................*/
+/* ...........................  ...........................*/
 /* Navbar */
 
 .header__navbar {
     display: flex;
     justify-content: space-between;
+    height: var(--navbar-height);
+    align-items: center;
 }
 
 .header-navbar-list {
@@ -25,16 +27,12 @@
     padding: 0 7px;
 }
 
-.header-navbar__item.non-padding {
-    padding: 0;
-}
-
 
 .header-navbar__item,
 .header-navbar__icon-link,
 .navbar-item__link {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 400;
@@ -56,8 +54,8 @@
 }
 
 
-
-/* ........................... */
+/* ...........................  ...........................*/
+/* ...........................  ...........................*/
 /* QR */
 
 .header-navbar__item--has-qr:hover .header__qr {
@@ -104,7 +102,8 @@
 } 
 
 
-/* ........................... */
+/* ...........................  ...........................*/
+/* ...........................  ...........................*/
 /* Notification */
 
 .header-navbar__item--has-notify:hover .navbar-item__link {
@@ -242,8 +241,181 @@
 
 
 
-/* .............................................. */
 
+/* ...........................  ...........................*/
+/* ...........................  ...........................*/
+
+.header-logo-search-cart {
+    height: var(--logo-search-cart-height);
+    display: flex;
+}
+
+
+/* Header logo */
+.header__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+}
+
+
+.header__logo-img {
+    height: 55%;
+    margin-left: 7px;
+    fill: var(--white-color);
+}
+
+
+/* Header tags*/
+.header__search-tag {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header__search,
+.header__tags {
+    transform: translateY(10px);
+}
+
+
+/* Header search */
+
+.header__search {
+    background-color: var(--white-color);
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.header__search-input {
+    flex: 1;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+.header__search-input:focus ~ .header__search-history-list {
+    display: block;
+}
+
+
+.header__search-icon-btn {
+    height: 33px;
+    width: 62px;
+    border: none;
+    outline: none;
+    background-color: #fb5533;
+    border-radius: 2px;
+    margin-right: 3px;
+    display: flex;
+    cursor: pointer;
+}
+
+.header__search-icon-btn:hover {
+    background-color: rgb(255, 102, 72);
+}
+
+.header__search-icon {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    margin: auto;
+}
+
+
+/* Search history */
+.header__search-history-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    background-color: var(--white-color);
+    width: calc(98% - 62px);
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgb(189,189,189);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.search-history__item-link {
+    padding: 14px 10px;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--text-color-blur);
+}
+
+.search-history__item-link:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+
+
+/* Header cart */
+.header__cart {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__cart-icon {
+    color: #fff;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+
+
+/* Header tags */
+.header__tags {
+    list-style: none;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 0px;
+    padding: 0;
+}
+
+
+
+.header__tag-link a{
+    color: var(--white-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .............................................. */
+/* modal */
 
 .auth-form {
     padding: 4px 32px;
@@ -403,3 +575,9 @@
     height:40px;
     color: #fff;
 } */
+
+
+
+.container {
+    height: 1000px;
+}
