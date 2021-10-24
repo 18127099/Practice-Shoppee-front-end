@@ -112,9 +112,11 @@ a {
 
 @keyframes growth {
     from {
+        opacity: 0;
         transform: scale(var(--growth-from));
     }
     to {
+        opacity: 1;
         transform: scale(var(--growth-to));
     }
 }
