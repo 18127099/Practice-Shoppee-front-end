@@ -470,7 +470,10 @@
     opacity: 0.5;
 }
 
-
+.header__cart-content {
+    max-height: 35vh;
+    overflow-y: auto;
+}
 
 .header__cart-item {
     display: flex;
@@ -824,6 +827,9 @@
     position: relative;
 }
 
+
+
+
 .btn-price .down-icon {
     position: absolute;
     right: 15px;
@@ -890,6 +896,7 @@
 
 .product-item__image {
     padding-top: 100%;
+    background-position: top center;
     background-size: contain;
 }
 
