@@ -60,10 +60,21 @@ a {
     width: 83.3333%;
 }
 
-.grid__column-10-2 {
+.grid__column-2-4 {
     padding-left: 5px;
     padding-right: 5px;
     width: 20%;
+}
+
+
+
+/* Margin */
+.mt-32 {
+    margin-top: 32px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
 }
 
 
@@ -72,7 +83,6 @@ a {
 .btn {
     padding-top: 8px;
     padding-bottom: 8px;
-    /* min-width: 142px; */
     cursor: pointer;
     text-align: center;
     border-radius: 2px;
